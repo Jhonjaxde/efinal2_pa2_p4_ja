@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http//www.thymeleaaf.org">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Document</title>
+
+</head>
+
+<body>
+	<form th:action="@{/materias/guardar}" th:object= "${materias}" th:method="POST">
+		<table>
+			
+			<tr>
+				<td><label>Nombre:</label></td>
+				<td><input type="text" th:field="${materias.nombre}"></td>
+			</tr>
+			<tr>
+				<td><label>Codigo:</label></td>
+				<td><input type="number" th:field="${materias.codigo}"></td>
+			</tr>
+			<tr>
+				<td><label>Numero de creditos:</label></td>
+				<td><input type="text" th:field="${materias.numeroCreditos}"></td>
+			</tr>
+			<tr>
+				<td><label>Cedula profesor:</label></td>
+				<td><input type="text" th:field="${materias.cedulaProfesor}"></td>
+			</tr>
+		</table>
+		<input type="submit" value="Guardar">
+	</form>
+</body>
+
+</html>

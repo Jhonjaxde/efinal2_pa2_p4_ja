@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http//www.thymeleaaf.org">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Document</title>
+
+</head>
+
+<body>
+	<form th:action="@{/materias/guardar}" th:object= "${matriculas}" th:method="POST">
+		<table>
+			
+			<tr>
+				<td><label>FechaMatricula:</label></td>
+				<td><input type="text" th:field="${matriculas.fechaMatricula}"></td>
+			</tr>
+			<tr>
+				<td><label>Codigo:</label></td>
+				<td><input type="number" th:field="${matriculas.hilo}"></td>
+			</tr>
+			
+		</table>
+		<input type="submit" value="Guardar">
+	</form>
+</body>
+
+</html>
